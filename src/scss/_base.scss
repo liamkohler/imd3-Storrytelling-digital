@@ -3,10 +3,7 @@
   margin: 0;
   padding: 0;
   color: white;
-}
-
-a {
-  color: inherit;
+  scroll-behavior: smooth;
 }
 
 img,
@@ -14,4 +11,36 @@ video {
   height: 50vh;
   width: 80vh;
   display: block;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Dorsa", "sans-serif";
+  font-size: 500px;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Bricolage Grotesque";
+  font-size: 60px;
+  font-weight: 550;
+}
+
+button {
+  position: absolute;
+  font-family: "Bricolage Grotesque", "sans-serif";
+  font-size: 26px;
+  padding: 10px 50px;
+  border: 2px solid white;
+  border-radius: 50px;
+  background-color: transparent;
+  bottom: 70px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-arrow {
 }

@@ -25,10 +25,15 @@ tl.to(".zoom-1-5", { scale: 3, y: "200%", filter: "blur(2px)", duration: 8 })
   .to(
     ".zoom-1-6",
     { scale: 3, y: "200%", filter: "blur(2px)", duration: 8 },
-    "<-0.4"
+    "<-0.6"
   )
   .to(
-    [".zoom-1-5", ".zoom-1-6"],
+    ".zoom-1-btn",
+    { scale: 3, y: "5000%", filter: "blur(2px)", duration: 8 },
+    "<-0.6"
+  )
+  .to(
+    [".zoom-1-5", ".zoom-1-6", ".zoom-1-7"],
     { opacity: 0, filter: "blur(5px)", duration: 3 },
     "-=5"
   )
@@ -43,7 +48,7 @@ tl.to(
   .to(
     ".zoom-2-6",
     { scale: 3, y: "200%", filter: "blur(2px)", duration: 8 },
-    "<-0.4"
+    "<-0.6"
   )
   .to(
     [".zoom-2-5", ".zoom-2-6"],
@@ -106,7 +111,7 @@ tl.to(
   .to(
     ".zoom-4-6",
     { scale: 3, y: "200%", filter: "blur(2px)", duration: 8 },
-    "<-0.4"
+    "<-0.6"
   )
   .to(
     [".zoom-4-5", ".zoom-4-6"],
@@ -124,7 +129,7 @@ tl.to(
   .to(
     ".zoom-5-6",
     { scale: 3, y: "200%", filter: "blur(2px)", duration: 8 },
-    "<-0.4"
+    "<-0.6"
   )
   .to(
     [".zoom-5-5", ".zoom-5-6"],
@@ -136,5 +141,5 @@ tl.to(
 // --- horizontal scroll ---
 tl.to(".zoom-06", { y: "-66%", duration: 6, ease: "power3.inOut" }, "-=1").to(
   ".scroll-h",
-  { x: "-100%", duration: 10, ease: "power2.inOut" }
+  { x: "-100%", duration: 10, ease: "power1.inOut" }
 );
