@@ -1,0 +1,30 @@
+.scroll-h-container {
+  bottom: 0.67%;
+  position: absolute;
+  left: 100%;
+  height: 100vh;
+  display: flex;
+  flex: inline;
+  gap: 100px;
+  overflow: hidden;
+  align-items: center;
+  padding-left: 900px;
+  img {
+    height: 100vh;
+    width: auto;
+  }
+}
+
+.scroll-h-seperator {
+  position: absolute; // pour empiler les images
+  top: 0;
+  left: 0;
+  img {
+    position: absolute; // empile les images
+    top: 0;
+    left: 0;
+  }
+  :nth-child(1) {
+    filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.2));
+  }
+}

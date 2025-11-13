@@ -138,8 +138,92 @@ tl.to(
   )
   .to(".zoom-05", { y: "50%", scale: 1.5, opacity: 0, duration: 4 }, "-=7");
 
-// --- horizontal scroll ---
-tl.to(".zoom-06", { y: "-66%", duration: 6, ease: "power3.inOut" }, "-=1").to(
-  ".scroll-h",
-  { x: "-100%", duration: 10, ease: "power1.inOut" }
+// --- SCENE 6 (vertical parallax descendante + transition) ---
+tl.fromTo(
+  ".zoom-6-5",
+  { y: "-40%" },
+  { y: "0%", duration: 6, ease: "power1.inOut" },
+  "-=5"
+)
+  .fromTo(
+    ".zoom-6-6",
+    { y: "-30%" },
+    { y: "0%", duration: 6, ease: "power1.inOut" },
+    "<"
+  )
+  .fromTo(
+    ".zoom-6-7",
+    { y: "-20%" },
+    { y: "0%", duration: 6, ease: "power1.inOut" },
+    "<"
+  )
+  .fromTo(
+    ".zoom-6-8",
+    { x: "20%" },
+    { x: "0%", duration: 6, ease: "power1.inOut" },
+    "<"
+  );
+
+// --- HORIZONTAL PARALLAX DES STALACTITES ---
+tl.fromTo(
+  ".scroll-h-container img:nth-child(1)", // stalactite1
+  { x: "20%" },
+  { x: "0%", duration: 10, ease: "power2.out" },
+  "-=1"
+)
+  .fromTo(
+    ".scroll-h-container img:nth-child(2)", // stalactite2
+    { x: "15%" },
+    { x: "0%", duration: 10, ease: "power2.out" },
+    "<"
+  )
+  .fromTo(
+    ".scroll-h-container img:nth-child(3)", // stalactite3
+    { x: "10%" },
+    { x: "0%", duration: 10, ease: "power2.out" },
+    "<"
+  );
+
+// translation globale de la scène + scroll horizontal final
+tl.to(".zoom-06", { y: "-66%", duration: 6, ease: "power1.inOut" }, "<").to(
+  ".scroll-h-container",
+  { x: "-100%", duration: 10, ease: "power1.inOut" },
+  "-=1"
+);
+
+// --- Horizontal parallax pour le calque stalactites ---
+// Parallax horizontal des stalactites
+gsap.fromTo(
+  ".scroll-h-seperator",
+  { x: "20%" }, // départ à droite
+  {
+    x: "0%",
+    scrollTrigger: {
+      trigger: ".scroll-h-container",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 1.2,
+    },
+    ease: "power2.out",
+  }
+);
+
+// Si tu veux un effet de profondeur, chaque image peut bouger légèrement différemment
+tl.fromTo(
+  ".scroll-h-seperator img:nth-child(1)", // stalactite1
+  { x: "10%" },
+  { x: "0%", duration: 10, ease: "power2.out" },
+  "-=10"
+);
+tl.fromTo(
+  ".scroll-h-seperator img:nth-child(2)", // stalactite2
+  { x: "100%" },
+  { x: "0%", duration: 10, ease: "power2.out" },
+  "<"
+);
+tl.fromTo(
+  ".scroll-h-seperator img:nth-child(3)", // stalactite3
+  { x: "200%" },
+  { x: "0%", duration: 10, ease: "power2.out" },
+  "<"
 );

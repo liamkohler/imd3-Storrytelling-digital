@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <title>Sabre</title>
+    <meta
+      name="description"
+      content="Une bande dessinée interactive racontant l'histoire d'une tigresse à dents de sabre durant le pléistocène."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
-    <link rel="icon" href="img/favicon.webp" />
+    <link rel="icon" href="img/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,7 +45,9 @@
 
       <!-- === SCENE 2 === -->
       <img class="zoom zoom-2-5" src="img/BD/21.webp" alt="" />
-      <div class="zoom zoom-02"><p>Le pléistocene, il y a 15’000 ans.</p></div>
+      <div class="zoom zoom-02">
+        <p>Le pléistocene, il y a 15’000 ans.</p>
+      </div>
       <img class="zoom parallax zoom-2-6" src="img/BD/22.webp" alt="" />
 
       <!-- === SCENE 3 === -->
@@ -72,21 +78,46 @@
       </div>
       <img class="zoom parallax zoom-5-6" src="img/BD/52.webp" alt="" />
 
+      <!-- === SCENE 6 === -->
       <div class="zoom-06">
         <p>Une petite tigresse à dents de sabre,</p>
         <p>voit le jour.</p>
-        <div class="scroll-h">
-          <img src="../src/img/MII_soba.webp" alt="" />
+
+        <!-- === VERTICAL PARALAX === -->
+        <img class="zoom parallax zoom-6-5" src="img/BD/61.webp" alt="" />
+        <img class="zoom parallax zoom-6-6" src="img/BD/62.webp" alt="" />
+        <img class="zoom parallax zoom-6-7" src="img/BD/63.webp" alt="" />
+        <img class="zoom parallax zoom-6-8" src="img/BD/64.webp" alt="" />
+
+        <!-- === HORIZONTAL SCROLL === -->
+        <div class="scroll-h-container">
+          <div class="scroll-h-seperator">
+            <img
+              class="scroll-h-seperator-01"
+              src="../src/img/BD/stalagtite1.webp"
+              alt=""
+            />
+            <img
+              class="scroll-h-seperator-02"
+              src="../src/img/BD/stalagtite2.webp"
+              alt=""
+            />
+            <img
+              class="scroll-h-seperator-03"
+              src="../src/img/BD/stalagtite3.webp"
+              alt=""
+            />
+          </div>
           <img src="../src/img/MII_soba.webp" alt="" />
           <img src="../src/img/MII_soba.webp" alt="" />
           <img src="../src/img/MII_soba.webp" alt="" />
         </div>
       </div>
     </div>
-
-    <!-- 
-    <div class="scroll-classique">scroll-classique</div> -->
-
     <script src="js/main.js" type="module"></script>
   </body>
 </html>
+
+<!-- <header></header>
+<main></main>
+<footer></footer> -->
