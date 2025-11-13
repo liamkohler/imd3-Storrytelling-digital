@@ -143,7 +143,7 @@ tl.fromTo(
   ".zoom-6-5",
   { y: "-40%" },
   { y: "0%", duration: 6, ease: "power1.inOut" },
-  "-=5"
+  "-=6"
 )
   .fromTo(
     ".zoom-6-6",
