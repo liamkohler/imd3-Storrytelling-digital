@@ -17,9 +17,6 @@
   background-repeat: no-repeat;
 }
 
-.parallax {
-}
-
 .zoom-1-5,
 .zoom-1-6,
 .zoom-1-btn {
@@ -51,34 +48,34 @@
 }
 
 .zoom-01 {
-  background-image: url(../img/BD/10.png);
+  background-image: url(../img/BD/10.webp);
   z-index: 30;
 }
 
 .zoom-02 {
-  background-image: url(../img/BD/20.png);
+  background-image: url(../img/BD/20.webp);
   z-index: 25;
 }
 
 .zoom-03 {
-  background-image: url(../img/BD/30.png);
+  background-image: url(../img/BD/30.webp);
   z-index: 20;
 }
 
 .zoom-04 {
-  background-image: url(../img/BD/40.png);
+  background-image: url(../img/BD/40.webp);
   z-index: 15;
 }
 
 .zoom-05 {
-  background-image: url(../img/BD/50.png);
+  background-image: url(../img/BD/50.webp);
   z-index: 10;
 }
 
 .zoom-06 {
   width: 100vw;
   height: 300vh;
-  background-image: url(../img/BD/60.png);
+  background-image: url(../img/BD/60.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;

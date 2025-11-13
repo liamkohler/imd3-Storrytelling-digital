@@ -26,21 +26,47 @@ p {
   font-weight: 550;
 }
 
-button {
+.btn-container {
+  z-index: 40;
   position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
   font-family: "Bricolage Grotesque", "sans-serif";
   font-size: 26px;
   padding: 10px 50px;
   border: 2px solid white;
   border-radius: 50px;
   background-color: transparent;
-  bottom: 70px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.btn-container {
-  display: flex;
-  justify-content: center;
+button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
+// CORRIGER
 .btn-arrow {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &:hover {
+    background-color: white;
+    color: black;
+
+    .btn-arrow {
+      transform: translateY(-6px);
+    }
+  }
+
+  &:active .btn-arrow {
+    transform: translateY(-2px);
+  }
 }

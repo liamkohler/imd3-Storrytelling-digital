@@ -33,7 +33,7 @@ tl.to(".zoom-1-5", { scale: 3, y: "200%", filter: "blur(2px)", duration: 8 })
     "<-0.6"
   )
   .to(
-    [".zoom-1-5", ".zoom-1-6", ".zoom-1-7"],
+    [".zoom-1-5", ".zoom-1-6", ".zoom-1-btn"],
     { opacity: 0, filter: "blur(5px)", duration: 3 },
     "-=5"
   )
