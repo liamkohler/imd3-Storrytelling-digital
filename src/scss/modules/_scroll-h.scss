@@ -6,9 +6,7 @@
   display: flex;
   flex: inline;
   gap: 100px;
-  overflow: hidden;
   align-items: center;
-  padding-left: 900px;
   img {
     height: 100vh;
     width: auto;
@@ -16,15 +14,27 @@
 }
 
 .scroll-h-seperator {
-  position: absolute; // pour empiler les images
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 0px;
   img {
-    position: absolute; // empile les images
+    position: absolute;
     top: 0;
     left: 0;
   }
   :nth-child(1) {
     filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.2));
+  }
+}
+
+.scroll-h-img-container {
+  margin-left: 970px;
+  display: flex;
+  align-items: center;
+  gap: 500px;
+  background-color: black;
+  img {
+    max-width: 40vw;
+    height: 100%;
   }
 }
