@@ -143,7 +143,7 @@ tl.fromTo(
   ".zoom-6-5",
   { y: "-40%" },
   { y: "0%", duration: 6, ease: "power1.inOut" },
-  "-=6"
+  "-=5"
 )
   .fromTo(
     ".zoom-6-6",
@@ -164,29 +164,31 @@ tl.fromTo(
     "<"
   );
 
-// --- HORIZONTAL PARALLAX DES STALACTITES ---
-tl.fromTo(
-  ".scroll-h-container img:nth-child(1)", // stalactite1
-  { x: "10%" },
-  { x: "0%", duration: 10, ease: "power2.out" },
-  "<"
-)
-  .fromTo(
-    ".scroll-h-container img:nth-child(2)", // stalactite2
-    { x: "15%" },
-    { x: "0%", duration: 10, ease: "power2.out" },
-    "<"
-  )
-  .fromTo(
-    ".scroll-h-container img:nth-child(3)", // stalactite3
-    { x: "10%" },
-    { x: "0%", duration: 10, ease: "power2.out" },
-    "<"
-  );
-
 // translation globale de la scène + scroll horizontal final
 tl.to(".zoom-06", { y: "-66%", duration: 6, ease: "power1.inOut" }, "<").to(
   ".scroll-h-container",
   { x: "-100%", duration: 40, ease: "none" },
   "<5"
+);
+
+// --- SEPARATOR PARALAX ---
+tl.fromTo(
+  ".scroll-h-seperator-01",
+  { xPercent: 10 },
+  { xPercent: 0, duration: 11, ease: "none" },
+  "<"
+);
+
+tl.fromTo(
+  ".scroll-h-seperator-02",
+  { xPercent: 40 },
+  { xPercent: 0, duration: 11, ease: "none" },
+  "<"
+);
+
+tl.fromTo(
+  ".scroll-h-seperator-03",
+  { xPercent: 100 },
+  { xPercent: 0, duration: 11, ease: "none" },
+  "<"
 );

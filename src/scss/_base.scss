@@ -27,10 +27,8 @@ p {
   font-weight: 550;
 }
 
-.zoom-06 {
-  p:nth-of-type(2) {
-    margin-top: 178vh;
-  }
+a {
+  text-decoration: none;
 }
 
 .scene-text-container {
@@ -46,5 +44,36 @@ p {
   p:nth-of-type(even) {
     align-self: flex-end;
     text-align: right;
+  }
+}
+
+.zoom-06 {
+  p {
+    margin-top: 25vh;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  padding: 150px 100px;
+  img {
+    max-height: 80vh;
+  }
+}
+
+.footer-content-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    font-family: "Albert Sans";
+    font-size: 50px;
+    letter-spacing: -3.5px;
+    margin-top: -120px;
   }
 }
