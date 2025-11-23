@@ -27,14 +27,16 @@
 
 .scroll-h-fresco-container {
   min-height: 100vh;
+  max-height: 100vh;
   margin-left: 970px;
   margin-right: -100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: flex;
-  gap: 300px;
+  gap: 20vw;
   background-color: black;
   img {
-    max-width: 40vw;
-    height: 100%;
+    height: 60vh;
     z-index: 1;
   }
   img:nth-of-type(even) {
@@ -43,4 +45,15 @@
   img:nth-of-type(odd) {
     align-self: flex-end;
   }
+}
+
+#scroll-h-fresco-last-img {
+  height: 100vh;
+  align-self: center;
+  margin-right: 50vw;
+}
+
+#scroll-h-fresco-last-img-first {
+  height: 90vh;
+  align-self: center;
 }
