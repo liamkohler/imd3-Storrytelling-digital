@@ -1,7 +1,26 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+// --- Bouton scroll vers le bas ---
+document.getElementById("scroll-down").addEventListener("click", () => {
+  gsap.to(window, {
+    duration: 2,
+    scrollTo: { y: document.body.scrollHeight },
+    ease: "power2.inOut",
+  });
+});
+
+// --- Bouton scroll vers le haut (pas clickable a cause du container) ---
+// document.getElementById("scroll-up").addEventListener("click", () => {
+//   gsap.to(window, {
+//     duration: 2,
+//     scrollTo: { y: 0 },
+//     ease: "power2.inOut",
+//   });
+// });
 
 // --- Set transform origins for clean zooms ---
 gsap.set(".zoom", { transformOrigin: "center bottom" });
@@ -177,18 +196,16 @@ tl.fromTo(
   { xPercent: 10 },
   { xPercent: 0, duration: 11, ease: "none" },
   "<"
-);
-
-tl.fromTo(
-  ".scroll-h-seperator-02",
-  { xPercent: 40 },
-  { xPercent: 0, duration: 11, ease: "none" },
-  "<"
-);
-
-tl.fromTo(
-  ".scroll-h-seperator-03",
-  { xPercent: 100 },
-  { xPercent: 0, duration: 11, ease: "none" },
-  "<"
-);
+)
+  .fromTo(
+    ".scroll-h-seperator-02",
+    { xPercent: 40 },
+    { xPercent: 0, duration: 11, ease: "none" },
+    "<"
+  )
+  .fromTo(
+    ".scroll-h-seperator-03",
+    { xPercent: 100 },
+    { xPercent: 0, duration: 11, ease: "none" },
+    "<"
+  );

@@ -26,10 +26,8 @@
       <div id="top" class="zoom zoom-01"><h1>sabre</h1></div>
       <img class="zoom parallax zoom-1-6" src="img/BD/12.webp" alt="" />
       <div class="btn-container">
-        <button class="zoom-1-btn">
-          <!-- <a href="#bottom"> ce bouttons ne fonctionne pas a cause du scroll horizontale -->
+        <button id="scroll-down" class="zoom-1-btn">
           VOIR LA BD
-          <!-- </a> -->
           <div class="btn-arrow">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +142,7 @@
             <!-- <a
               href="https://www.fr.fnac.ch/a13173344/Sabre-Tome-0-Sabre-Feres-Eric"
             >
-              ce lien n'est pas clicable a cause d'une raison inconnue'
+              (pas clickable a cause du container)'
             </a> -->
             <img src="img/livre.webp" alt="livre" />
             <div class="footer-content">
@@ -153,11 +151,8 @@
                 <span>Dargaud</span>
                 <span>Éric Feres</span>
               </div>
-              <button>
-                <!-- <a href="#top"> ce bouttons ne fonctionne pas a cause du scroll horizontale -->
-                Retour au début
-                <!-- </a> -->
-              </button>
+              <!-- (boutton pas clickable a cause du container) -->
+              <button id="scroll-up">Retour au début</button>
             </div>
           </footer>
         </div>
@@ -166,7 +161,3 @@
     <script src="js/main.js" type="module"></script>
   </body>
 </html>
-
-<!-- <header></header>
-<main></main>
-<footer></footer> -->
